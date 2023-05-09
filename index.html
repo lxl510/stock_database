@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stock Market Data</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-image: url('stock-market-picture.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 30px;
+			border-radius: 10px;
+		}
+		
+		label {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		
+		input[type="text"] {
+			font-size: 18px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 20px;
+			width: 300px;
+			text-align: center;
+		}
+		
+		input[type="submit"] {
+			font-size: 18px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			background-color: #007bff;
+			color: #fff;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #0062cc;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form method="post" action="/search">
+			<label for="ticker">Enter Ticker Symbol:</label>
+			<input type="text" id="ticker" name="ticker" placeholder="Dow Jone Ticker Name" required>
+			<label for="date">Select Date:</label>
+			<input type="date" id="date" name="date" max="2030-04-27" required>
+			<input type="submit" value="Get Data">
+		</form>
+	</div>
+</body>
+</html>
